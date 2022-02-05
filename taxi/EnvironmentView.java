@@ -18,7 +18,7 @@ enum ElType {
 }
 
 public class EnvironmentView extends JFrame {
-  static int GRID_SZ = 20;
+  public static int GRID_SZ = 20;
 
   private static final long serialVersionUID = 1L;
 
