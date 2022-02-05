@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+const taxis = 5;
+const pedestrians = 10;
+
+require("child_process")
+  .exec(`./run.sh -agents "obs:taxi.EnvironmentObserver;${Array.from(Array(taxis), (_, i) => `taxi${i}:taxi.TaxiAgent`).concat(Array.from(Array(pedestrians), (_, i) => `ped${i}:taxi.PedestrianAgent`)).join(";")}"`);
