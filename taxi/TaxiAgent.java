@@ -11,7 +11,7 @@ import jade.domain.FIPAAgentManagement.ServiceDescription;
 import jade.lang.acl.ACLMessage;
 
 public class TaxiAgent extends MyAgent {
-  static int SPEED = 10;
+  static int SPEED = 5;
   static String SERVICE_NAME = "TaxiTransport";
   HashMap<Long, TravelProposal> proposals = new HashMap<>();
   boolean available = true;
