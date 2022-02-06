@@ -179,7 +179,7 @@ public class TaxiAgent extends MyAgent {
       ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
       msg.addReceiver(c.aid);
       try {
-        msg.setContentObject(new MessageArrived());
+        msg.setContentObject(new MessageDrop());
       } catch (Exception e) {
         e.printStackTrace();
       }
@@ -187,6 +187,7 @@ public class TaxiAgent extends MyAgent {
       andThen.run();
       ((TaxiAgent) myAgent).money += c.price;
       log("Balance: $" + c.price);
+      notifyEnvironmentObserver(new MessageDrop());
     }
   }
 

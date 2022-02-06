@@ -18,7 +18,7 @@ enum ElType {
 }
 
 public class EnvironmentView extends JFrame {
-  public static int GRID_SZ = 20;
+  public static int GRID_SZ = 10;
 
   private static final long serialVersionUID = 1L;
 
@@ -57,11 +57,11 @@ public class EnvironmentView extends JFrame {
 
   public void drawBlock(Graphics g, int x, int y, ElType c, String name) {
     g.setColor(c == ElType.TAXI ? Color.YELLOW : c == ElType.PEDESTRIAN ? Color.ORANGE : Color.GREEN);
-    if (c == ElType.DESIRED_POS) {
+    if (c == ElType.TAXI) {
+      g.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
+    } else {
       int radius = cellSize / 2;
       g.fillOval(x * cellSize + radius / 2, y * cellSize + radius / 2, radius, radius);
-    } else {
-      g.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
     }
 
     g.setColor(Color.black);

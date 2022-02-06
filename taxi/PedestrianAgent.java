@@ -25,10 +25,16 @@ public class PedestrianAgent extends MyAgent {
   @Override
   protected void setup() {
     super.setup();
-    updateCurrentPos(new Pos(random.nextInt(EnvironmentView.GRID_SZ), random.nextInt(EnvironmentView.GRID_SZ)));
-    pickRandomDestination();
+    addBehaviour(new WakerBehaviour(this, 200) {
+      @Override
+      protected void onWake() {
+        updateCurrentPos(new Pos(random.nextInt(EnvironmentView.GRID_SZ), random.nextInt(EnvironmentView.GRID_SZ)));
+        pickRandomDestination();
+        addBehaviour(new TravelBehaviour());
+      }
+    });
 
-    this.on(MessageArrived.class, (c) -> {
+    this.on(MessageDrop.class, (c) -> {
       updateCurrentPos(destination);
       destination = new Pos(random.nextInt(EnvironmentView.GRID_SZ), random.nextInt(EnvironmentView.GRID_SZ));
       pickRandomDestination();
@@ -49,7 +55,6 @@ public class PedestrianAgent extends MyAgent {
       });
     });
 
-    addBehaviour(new TravelBehaviour());
   }
 
   private void updateCurrentPos(Pos pos) {

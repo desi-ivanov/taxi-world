@@ -4,10 +4,11 @@ import jade.domain.DFService;
 import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
+import jade.lang.acl.ACLMessage;
 
 public class EnvironmentObserver extends MyAgent {
   static String SERVICE_NAME = "EnvironmentObserver";
-  EnvironmentModel environmentModel = new EnvironmentModel();
+  EnvironmentModel model = new EnvironmentModel();
 
   @Override
   protected void setup() {
@@ -25,11 +26,10 @@ public class EnvironmentObserver extends MyAgent {
       fe.printStackTrace();
     }
 
-    on(MessageMyTaxiPosition.class, environmentModel::updateTaxiPosition);
-    on(MessageMyDesiredPosition.class, environmentModel::updatePedestrianDestination);
-    on(MessageMyPedestrianPosition.class, environmentModel::updatePedestrianPosition);
-    on(MessagePickedUpAgent.class, environmentModel::updatePedestrianPickedUp);
-
+    on(MessageMyTaxiPosition.class, op -> model.updateTaxiPosition(op.fst.getSender().getLocalName(), op.snd.pos));
+    on(MessageMyDesiredPosition.class, op ->  model.updatePedestrianDestination(op.fst.getSender().getLocalName(), op.snd.pos));
+    on(MessageMyPedestrianPosition.class, op -> model.updatePedestrianPosition(op.fst.getSender().getLocalName(), op.snd.pos));
+    on(MessagePickedUpAgent.class, op -> model.updatePedestrianPickedUp(op.fst.getSender().getLocalName(), op.snd.client.getLocalName()));
+    on(MessageDrop.class, op -> model.updatePedDrop(op.fst.getSender().getLocalName()));
   }
-
 }
