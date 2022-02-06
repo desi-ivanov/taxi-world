@@ -1,0 +1,8 @@
+MAS taxi {
+	environment: TaxiEnv(2, 3)
+	
+    agents: taxi #2;
+        pedestrian #3;
+	classpath: "../classes";
+
+}
