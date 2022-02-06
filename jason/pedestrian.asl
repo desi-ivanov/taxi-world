@@ -15,7 +15,7 @@
 		desire_position(X, Y);
 		!travel_to(X, Y);
 		!ensure_arrived(X,Y);
-		.wait(1000);
+		.wait(2000);
 		!travel.
 
 +!travel_to(X, Y)                                                
@@ -27,7 +27,7 @@
 		
 -!travel_to(X,Y)[Reason] 
 	<- .print("travel_to failed! Retrying later.",Reason); 
-	   .wait(1000); 
+	   .wait(300); 
 	   !travel_to(X,Y).
 
 all_received(Len):- .count(propose(_)[source(_)], Len).
