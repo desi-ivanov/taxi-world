@@ -4,7 +4,6 @@ import jade.domain.DFService;
 import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
-import jade.lang.acl.ACLMessage;
 
 public class EnvironmentObserver extends MyAgent {
   static String SERVICE_NAME = "EnvironmentObserver";
