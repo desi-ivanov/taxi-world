@@ -52,7 +52,6 @@ public class TaxiEnv extends Environment {
                     if (model.carrying.containsKey(ag)) {
                         removePerceptsByUnif(model.carrying.get(ag), Literal.parseLiteral("current_pos(X,Y)"));
                         addPercept(model.carrying.get(ag), Literal.parseLiteral("current_pos(" + x + "," + y + ")"));
-                        model.updatePedestrianPosition(model.carrying.get(ag), new Pos(x, y));
                     }
                 } else if (ag.contains("ped"))
                     model.updatePedestrianPosition(ag, new Pos(x, y));
