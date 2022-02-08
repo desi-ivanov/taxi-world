@@ -1,2 +1,3 @@
-# TaxiWorld - A multi agent system with Jade and Jason
-![](demo.png)
+# taxi-world
+A multi-agent system with AgentSpeak(L), Jason and Jade
+![](demo.svg)

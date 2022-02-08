@@ -1265,11 +1265,11 @@
             "parentId": "page",
             "childIndex": 11,
             "point": [
-              320.51,
+              384.01,
               473.93
             ],
             "rotation": 0,
-            "text": "Quanto costa andare in x,y?",
+            "text": "Price to go to x,y?",
             "style": {
               "color": "black",
               "size": "small",
@@ -2471,11 +2471,11 @@
             "parentId": "page",
             "childIndex": 28,
             "point": [
-              846.48,
+              859.98,
               437.98
             ],
             "rotation": 0,
-            "text": "Prezzo2",
+            "text": "Price2",
             "style": {
               "color": "black",
               "size": "small",
@@ -2493,11 +2493,11 @@
             "parentId": "page",
             "childIndex": 29,
             "point": [
-              850.17,
+              864.67,
               213.23
             ],
             "rotation": 0,
-            "text": "Prezzo1",
+            "text": "Price1",
             "style": {
               "color": "black",
               "size": "small",
@@ -2515,11 +2515,11 @@
             "parentId": "page",
             "childIndex": 30,
             "point": [
-              1088.37,
+              1101.87,
               280.55
             ],
             "rotation": 0,
-            "text": "Prezzo3",
+            "text": "Price3",
             "style": {
               "color": "black",
               "size": "small",
@@ -2731,11 +2731,11 @@
             "parentId": "page",
             "childIndex": 41,
             "point": [
-              1363.33,
+              1373.83,
               214.56
             ],
             "rotation": 0,
-            "text": "Accetto",
+            "text": "Accept",
             "style": {
               "color": "black",
               "size": "small",
@@ -3774,11 +3774,11 @@
             "parentId": "page",
             "childIndex": 47,
             "point": [
-              1393.3500275046404,
+              1399.3500275046404,
               457.93108172801294
             ],
             "rotation": 0,
-            "text": "Rifiuto",
+            "text": "Refuse",
             "style": {
               "color": "black",
               "size": "small",
@@ -3796,11 +3796,11 @@
             "parentId": "page",
             "childIndex": 48,
             "point": [
-              1515.5,
+              1521.5,
               294.22
             ],
             "rotation": 0,
-            "text": "Rifiuto",
+            "text": "Refuse",
             "style": {
               "color": "black",
               "size": "small",
@@ -5517,37 +5517,33 @@
             ],
             "isComplete": true
           },
-          "0cb971e5-048b-4fed-3adc-50fa27bd478c": {
-            "id": "0cb971e5-048b-4fed-3adc-50fa27bd478c",
-            "type": "draw",
-            "name": "Draw",
+          "a87b6056-4232-4553-08c1-d319d00ca92d": {
+            "id": "a87b6056-4232-4553-08c1-d319d00ca92d",
+            "type": "rectangle",
+            "name": "Rectangle",
             "parentId": "page",
-            "childIndex": 131,
+            "childIndex": 0.5,
             "point": [
-              725.98,
-              881.63
+              209.94,
+              -110.27
+            ],
+            "size": [
+              2558.23,
+              812.73
             ],
             "rotation": 0,
             "style": {
-              "color": "black",
+              "color": "white",
               "size": "small",
-              "isFilled": false,
-              "dash": "dotted",
+              "isFilled": true,
+              "dash": "draw",
               "scale": 1
             },
-            "points": [
-              [
-                0,
-                0,
-                0.5
-              ],
-              [
-                0,
-                0,
-                0.5
-              ]
-            ],
-            "isComplete": true
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
           }
         },
         "bindings": {}
